@@ -45,7 +45,7 @@ class VigenereCipheringMachine {
       res += matr[0][j] || phrase[i];
       if (!matr[0][j]) {
         key = ' ' + key;
-        //console.log("log1:");
+        
       }
     }
     return this.direct ? res : [...res].reverse().join('');

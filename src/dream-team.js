@@ -1,5 +1,3 @@
-const CustomError = require("../extensions/custom-error");
-
 module.exports = function createDreamTeam(members) {
 
   if (Array.isArray(members) !== true) {
@@ -11,5 +9,4 @@ let arrSort = Array.from(arrMap.sort().join("").toUpperCase());
 arrSort = arrSort.sort().join("");
 
 return arrSort;
-  
 };

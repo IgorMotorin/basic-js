@@ -1,5 +1,3 @@
-const CustomError = require("../extensions/custom-error");
-
 module.exports = function repeater(str, options) {
   const string = String(str);
 
@@ -22,7 +20,5 @@ module.exports = function repeater(str, options) {
   const additionExpression = addition.concat(additionSeparator).repeat(additionRepeat).slice(0, -additionSeparatorLength);
   return string.concat(additionExpression).concat(separator).repeat(repeat).slice(0, -separatorLength);
 
-  //throw new CustomError('Not implemented');
-  // remove line with error and write your code here
 };
   
