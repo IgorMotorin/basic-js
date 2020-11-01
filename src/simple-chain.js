@@ -16,19 +16,24 @@ const chainMaker = {
       this.chain = [];
       throw new Error();
     }
+
     return this;
   },
   
   reverseChain() {
     this.chain = this.chain.reverse();
     return this;
+
   },
   finishChain() {
     let res = '';
+
     for (let i = 0; i < this.chain.length; i++) {
+
       res += `( ${this.chain[i]} )~~`;
     }
     this.chain = [];
+    
     return res.slice(0, -2);
   },
 };
