@@ -27,6 +27,7 @@ hanoi(disksNumber, a, b, c);
 let sec = Math.floor(3600/turnsSpeed * n);
 let obj = {turns: n, seconds: sec};*/
 
+
 //====================================================
 
 let n = Math.pow(2, disksNumber) - 1;

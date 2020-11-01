@@ -20,6 +20,7 @@ module.exports = function dateSample(sampleActivity) {
      return false;
    }
 
+  
   return out;
 
   

@@ -27,6 +27,5 @@ if (11 < month || month < 3) {
   return("autumn");
 }
 
-  //throw new CustomError('Not implemented');
-  // remove line with error and write your code here
+  
 };

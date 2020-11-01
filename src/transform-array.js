@@ -1,14 +1,14 @@
 const CustomError = require("../extensions/custom-error");
 
 module.exports = function transform(arr) {
-  //console.log(arr);
+  
 
   if (arr instanceof Array) {
   let arr_t;
   arr_t = arr.slice();
   let index_id = 0;
 
-  //console.log("arr:", arr);
+  
   arr.forEach((item, index) => {
     if (item === `--discard-next`) {
       arr_t.splice(index + 1 + index_id, 1);
@@ -24,14 +24,14 @@ module.exports = function transform(arr) {
     if (item === `--double-next` && index !== (arr.length - 1)) {
       arr_t.splice(index + 1 + index_id, 0, arr_t[index  + 1 + index_id]);
       index_id = index_id + 1;
-      //console.log("1:", arr_t)
+      
       
     }
     if (item === `--double-prev` && index !== 0) {
       arr_t.splice(index - 1 + index_id, 0, arr_t[index - 1 + index_id]);
       index_id = index_id + 1;
     }
-    //console.log("arr_t:", arr_t);
+    
   });
 
 
@@ -39,7 +39,7 @@ module.exports = function transform(arr) {
   arr_2t = arr_t.slice();
   let index_id2 = 0;
 
-  //console.log("arr_t-1:", arr_t);
+  
   arr_t.forEach((item, index) => {
     if (item === `--discard-next` ||
     item === `--discard-prev` ||
@@ -50,7 +50,7 @@ module.exports = function transform(arr) {
       
     }
     
-    //console.log("после вырезки", arr_2t);
+    
     
   });
 
@@ -61,7 +61,5 @@ module.exports = function transform(arr) {
 }; 
 
 throw new Error("THROW");
-  //console.log(arr); // исходный массив не меняется
-  //throw new CustomError('Not implemented');
-  // remove line with error and write your code here
+  
 };
